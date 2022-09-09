@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sign up</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/file-1656361027924-fd935f26c71aimage');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+
+        }
+
+        #radio {
+            margin-top: 36px;
+        }
+        .container{
+                 margin-top:7%;
+                 margin-top:5%;
+                 margin-bottom: 4%;
+                 margin-right:30vw;
+                 margin-right:25%;
+                 margin-left:25%;
+                 
+                 /* border: 5px red solid; */
+                 box-sizing: border-box;
+                 display: flex;
+                 justify-content: center;
+                }
+                /* #fill{
+                    width: 50%;
+                } */
+                form p a{
+                text-decoration: none;
+            }
+                form{
+                    background-color: #fff;
+                    width: 50%;
+                border-radius: 13px;
+                padding-bottom: 23px;
+                padding-top: 23px;
+                margin-left:6% ;
+                padding-left: 25px;
+                padding-right: 15px;
+
+                box-shadow:8px 5px 5px 8px;
+                height: fit-content;
+            }
+
+        h1 {
+            color: black;
+        }
+
+        form h1 {
+            font-size: 28px;
+            text-align: center;
+            text-decoration: dotted;
+        }
+
+        /* #butt {
+            margin: 0;
+            position: relative;
+            
+            left: 17vw;
+            
+        } */
+        @media only screen and (max-width: 750px) {
+            
+            .container{
+                width: fit-content;
+                display: block;
+
+            }
+            form{
+                margin: 3%;
+                width: fit-content;
+            }
+
+           
+        }
+    </style>
+    <link  href="page2.html">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+        <div class="container">
+            <form action="https://sheetdb.io/api/v1/6tcpse5lqatdj" method="post" id="sheet.form">
+                <h1>REGISTER TO VIDYA FARMS</h1>
+                <hr>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label" >Email address</label>
+                    <input  id="fill" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        aria-describedby="inputGroupPrepend" name="data[Email]" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="form-control" >First Name</label>
+                        <input type="text" class="form-control" aria-label="First name" aria-describedby="inputGroupPrepend" name="data[Firstname]"
+                            required>
+                    </div>
+                    <div class="col">
+                        <label for="form-control">Last Name</label>
+                        <input type="text" class="form-control" aria-label="Last name" aria-describedby="inputGroupPrepend" name="data[Lastname]"
+                            required>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Create Password</label>
+                    <input id="fill" type="password" class="form-control" id="exampleInputPassword1" name="data[Createpass]"
+                        aria-describedby="inputGroupPrepend" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input id="fill" type="password" class="form-control" id="exampleInputPassword1"
+                        aria-describedby="inputGroupPrepend" required>
+                </div>
+                <div>
+                    <button id="butt" type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <p>already have an account?.. <a href="/login.html">Login</a></p>
+    
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous">
+
+        </script>
+        
+        <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('page2.html', '_blank');
+
+          });
+        });
+        </script>
+    </body>
+    
+    </html>
