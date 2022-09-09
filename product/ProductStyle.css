@@ -204,13 +204,17 @@ body {
     color:#130f40;
     cursor: pointer;
     background: none;
-    position: absolute;
-    left: 675px;
 }
 
 .btn:hover{
     background: #6cc769;
     color:#fff;
+}
+
+.HomeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
