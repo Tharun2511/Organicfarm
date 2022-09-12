@@ -29,6 +29,17 @@ body {
     flex-direction: column;
 }
 
+.logo{
+    color: #eee;
+    font-size: 30px;
+    font-family: "Gabriola", Times, serif;
+    font-weight: 600;
+}
+
+.logo i{
+    color: #6cc769;
+}
+
 .container .post {
     display: none;
 }
@@ -161,4 +172,22 @@ form .btn button {
 
 form .btn button:hover {
     background: #555050;
+}
+
+.Homebtn{
+    font-size: 30px;
+}
+
+.Homebtn a{
+    text-decoration: none;
+    color: #eee;
+    border: 2px solid #eee;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+.Homebtn a:hover{
+    background-color: #eee;
+    color: #111;
 }
